@@ -127,17 +127,62 @@
 
   <footer id="contact" class="footer">
     <div class="wrap footer__inner">
-      <div>
+      <div class="footer__col">
         <p class="footer__brand">Missing<span>OsiriX</span>Plugins</p>
         <p class="footer__meta">
           Built by SMH, Suministro para Uso Médico y Hospitalario<br />
           Mexico City, Mexico
         </p>
-      </div>
-      <div class="footer__contact">
-        <a href="mailto:Victor@smh.com.mx" class="btn btn--primary">Victor@smh.com.mx</a>
         <p class="footer__disclaimer">
           Not affiliated with Pixmeo SARL. OsiriX® is a registered trademark of Pixmeo SARL.
+        </p>
+      </div>
+
+      <div class="footer__form-wrap">
+        <h3 class="footer__form-title">Get in touch</h3>
+        <form
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          class="contact-form"
+          id="contact-form"
+        >
+          <input type="hidden" name="form-name" value="contact" />
+          <p class="hp-field">
+            <label>Leave this field empty: <input name="bot-field" /></label>
+          </p>
+
+          <label class="field">
+            <span>Name</span>
+            <input type="text" name="name" required />
+          </label>
+
+          <label class="field">
+            <span>Email</span>
+            <input type="email" name="email" required />
+          </label>
+
+          <label class="field">
+            <span>Reason</span>
+            <select name="reason">
+              <option value="Buy DICOM PrintView">I want to buy DICOM PrintView</option>
+              <option value="Suggest a plugin">I want to suggest a plugin</option>
+              <option value="General question">General question</option>
+            </select>
+          </label>
+
+          <label class="field">
+            <span>Message</span>
+            <textarea name="message" rows="4" required></textarea>
+          </label>
+
+          <button type="submit" class="btn btn--primary">Send message</button>
+          <p class="form-status" id="form-status" role="status"></p>
+        </form>
+
+        <p class="footer__meta footer__meta--email">
+          Prefer email? <a href="mailto:Victor@smh.com.mx">Victor@smh.com.mx</a>
         </p>
       </div>
     </div>
