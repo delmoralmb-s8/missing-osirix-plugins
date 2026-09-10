@@ -2,3 +2,6 @@
 Thumbs.db
 node_modules/
 .netlify/
+
+# Paid plugin binaries and internal tracking, never publish these
+1stPlugin/
